@@ -7,3 +7,10 @@ This was made with love by me.
 Any support, please [contact me!](https://kaitlyn.codes)
 
 Good luck, feel free to rehost this!
+
+This source currently powers:
+[Voxity](https://voxity.xyz)
+[KittyBlox](https://kittys.rip)
+[Vortexi](https://vortexi.de)
+[Kurumi](https://kurumi.one)
+
