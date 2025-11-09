@@ -9,5 +9,5 @@ Any support, please [contact me!](https://kaitlyn.codes)
 Good luck, feel free to rehost this!
 
 This source currently powers:<br>
-[Voxity](https://voxity.xyz) // [KittyBlox](https://kittys.rip) // [Vortexi](https://vortexi.de) // [Kurumi](https://kurumi.one)
+[Voxity](https://voxity.xyz) // [KittyBlox](https://kittys.rip) // [Vortexi](https://vortexi.de)
 
