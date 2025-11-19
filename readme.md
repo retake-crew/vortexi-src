@@ -1,8 +1,8 @@
 # Vortexi Source Code
 
-This is the original Vortexi source code (not vortexi.de)
+This is the original Vortexi source code with much needed improvements.
 
-This was made with love by me.
+This was made with love by [me](https://kaitlyn.codes).
 
 Get started here: [vortexiwebsite/README.md](vortexiwebsite/README.md)
 
