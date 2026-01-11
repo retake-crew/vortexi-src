@@ -292,9 +292,9 @@ Icon={}
 Type=Application
 Terminal=true
 Version={}
-MimeType=x-scheme-handler/vortexi-player;", latest_bootstrapper_path.to_str().unwrap(), latest_bootstrapper_path.to_str().unwrap(), env!("CARGO_PKG_VERSION"));
+MimeType=x-scheme-handler/cayneez-player;", latest_bootstrapper_path.to_str().unwrap(), latest_bootstrapper_path.to_str().unwrap(), env!("CARGO_PKG_VERSION"));
                 
-                let desktop_file_path = dirs::data_local_dir().unwrap().join("applications").join("vortexi-player.desktop");
+                let desktop_file_path = dirs::data_local_dir().unwrap().join("applications").join("cayneez-player.desktop");
                 std::fs::write(desktop_file_path, desktop_file_content).unwrap();
 
                 info("Please launch Vortexi from the website, to continue with the update process.");
@@ -344,13 +344,13 @@ MimeType=x-scheme-handler/vortexi-player;", latest_bootstrapper_path.to_str().un
         info("Finished extracting files, cleaning up.");
         std::fs::remove_dir_all(&temp_downloads_directory).unwrap();
 
-        // Install the vortexi-player scheme in the registry
-        info("Installing vortexi-player scheme");
+        // Install the cayneez-player scheme in the registry
+        info("Installing cayneez-player scheme");
         #[cfg(target_os = "windows")]
         {
             let hkey_current_user = RegKey::predef(HKEY_CURRENT_USER);
             let hkey_classes_root : RegKey = hkey_current_user.open_subkey("Software\\Classes").unwrap();
-            let hkey_syntax_player = hkey_classes_root.create_subkey("vortexi-player").unwrap().0;
+            let hkey_syntax_player = hkey_classes_root.create_subkey("cayneez-player").unwrap().0;
             let hkey_syntax_player_shell = hkey_syntax_player.create_subkey("shell").unwrap().0;
             let hkey_syntax_player_shell_open = hkey_syntax_player_shell.create_subkey("open").unwrap().0;
             let hkey_syntax_player_shell_open_command = hkey_syntax_player_shell_open.create_subkey("command").unwrap().0;
@@ -370,9 +370,9 @@ Icon={}
 Type=Application
 Terminal=true
 Version={}
-MimeType=x-scheme-handler/vortexi-player;", latest_bootstrapper_path.to_str().unwrap(), latest_bootstrapper_path.to_str().unwrap(), env!("CARGO_PKG_VERSION"));
+MimeType=x-scheme-handler/cayneez-player;", latest_bootstrapper_path.to_str().unwrap(), latest_bootstrapper_path.to_str().unwrap(), env!("CARGO_PKG_VERSION"));
             
-            let desktop_file_path = dirs::data_local_dir().unwrap().join("applications").join("vortexi-player.desktop");
+            let desktop_file_path = dirs::data_local_dir().unwrap().join("applications").join("cayneez-player.desktop");
             std::fs::write(desktop_file_path, desktop_file_content).unwrap();
         }
 
@@ -399,7 +399,7 @@ MimeType=x-scheme-handler/vortexi-player;", latest_bootstrapper_path.to_str().un
     }
 
     // Parse the arguments passed to the bootstrapper
-    // Looks something like "vortexi-player://1+launchmode:play+gameinfo:TICKET+placelauncherurl:https://vortexi.cc/Game/placelauncher.ashx?placeId=660&t=TICKET+k:l"
+    // Looks something like "cayneez-player://1+launchmode:play+gameinfo:TICKET+placelauncherurl:https://vortexi.cc/Game/placelauncher.ashx?placeId=660&t=TICKET+k:l"
     debug(&format!("Arguments Passed: {}", args.join(" ").bright_blue()));
     if args.len() == 1 {
         // Just open the website
@@ -416,7 +416,7 @@ MimeType=x-scheme-handler/vortexi-player;", latest_bootstrapper_path.to_str().un
     }
 
     let main_args = &args[1];
-    let main_args = main_args.replace("vortexi-player://", "");
+    let main_args = main_args.replace("cayneez-player://", "");
     let main_args = main_args.split("+").collect::<Vec<&str>>();
 
     let mut launch_mode = String::new();
